@@ -20,9 +20,10 @@ class DemoApplicationTests {
     @Test
     void contextLoads() {
     }
+    // autowired permet que le bean soit injecté
     @Autowired
     private MockMvc mvc;
-
+    // essentiel pour que spring lance le test
     @Test
     public void getHello() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON))
